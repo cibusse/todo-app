@@ -1,3 +1,5 @@
+/* App body styling */
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -77,6 +79,8 @@ li {
     padding: 10px;
     border-bottom: 1px solid #fff;
 }
+
+/* Task Strikethrough  */
 
 li.completed span {
     text-decoration: line-through;
