@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.todo-app {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* App title styling */
+.app-title {
+    text-align: center;
+    background-color: #0066b2;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    margin: 0;
+    font-size: 24px;
+}
+
+/* To-Do List container */
+.todo-app {
+    width: 320px;
+    background: #89CFF0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; 
+}
+
+/* Add button styling */
+#add-button {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    color: rgb(12, 11, 11);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+#todo-input {
+    flex: 1; 
+    width: auto; 
+}
+
+#todo-input.error {
+    border-color: rgb(243, 20, 131);
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+li.completed .todo-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.select-button {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.select-button.checked {
+    background-color: #0066b2;
+    border-color: #0066b2;
+    position: relative;
+}
+
+.select-button.checked::after {
+    content: '\2713'; /* Checkmark */
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Highlight selected buttons */
+button:hover, button:focus {
+    background-color: #0066b2;
+    color: white;
+}
+
+/* Clear All button */
+#clear-all {
+    background-color: #ff6666;
+    color: white;
+}
+
+
+.footer {
+    margin-top: 20px;
+}
