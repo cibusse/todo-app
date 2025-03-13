@@ -78,7 +78,7 @@ li {
     border-bottom: 1px solid #fff;
 }
 
-li.completed .todo-text {
+li.completed span {
     text-decoration: line-through;
     color: #888;
 }
