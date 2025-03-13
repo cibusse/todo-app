@@ -42,19 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('todos', JSON.stringify(todos));
     };
 
-    const showTooltip = (message) => {
-        const tooltip = document.createElement('div');
-        tooltip.className = 'tooltip';
-        tooltip.textContent = message;
-        document.body.appendChild(tooltip);
-        
-        const rect = input.getBoundingClientRect();
-        tooltip.style.left = `${rect.left + window.scrollX}px`;
-        tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
-
-        setTimeout(() => tooltip.remove(), 2000);
-    };
-
+    // Add Button
     const addItem = () => {
         const text = input.value.trim();
 
@@ -78,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         render();
     };
 
+     // Remove Button
     const removeItem = (index) => {
         todos.splice(index, 1);
         render();
@@ -88,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         render();
     };
 
+    // Task Counter
     const updateItemsLeft = () => {
         const count = todos.filter(todo => !todo.completed).length;
         itemsLeft.textContent = `${count} items left`;
@@ -110,11 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Clear Completed Button
     const clearCompleted = () => {
         todos = todos.filter(todo => !todo.completed);
         render();
     };
 
+   // Clear All  Button
     const clearAll = () => {
         todos = [];
         render();
